@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" prefHeight="17.0" prefWidth="80.0" text="Kategoriefilter" AnchorPane.topAnchor="22.0" />
+      <ComboBox fx:id="filterBox" layoutX="117.0" layoutY="18.0" onAction="#filterBoxSelected" prefWidth="150.0" AnchorPane.leftAnchor="117.0" AnchorPane.topAnchor="18.0" />
+      <ListView fx:id="articleListView" layoutX="17.0" layoutY="53.0" onMouseClicked="#articleListViewClicked" prefHeight="333.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="53.0" />
+      <Label fx:id="idLabel" layoutX="267.0" layoutY="64.0" prefHeight="17.0" prefWidth="107.0" text="ID:" />
+      <Label fx:id="priceLabel" layoutX="267.0" layoutY="125.0" prefHeight="17.0" prefWidth="107.0" text="price:" />
+      <Label fx:id="nameLabel" layoutX="267.0" layoutY="94.0" prefHeight="17.0" prefWidth="107.0" text="name:" />
+      <Label fx:id="currencyLabel" layoutX="267.0" layoutY="161.0" prefHeight="17.0" prefWidth="107.0" text="currency:" />
+      <Label fx:id="stockLabel" layoutX="267.0" layoutY="192.0" prefHeight="17.0" prefWidth="107.0" text="stock:" />
+   </children>
+</AnchorPane>
