@@ -9,20 +9,11 @@ public class Controller implements IFoodPublisher {
     /**
      * Alle GUI - Elemente, die über den Controller gesteuert
      * werden sollen, MÜSSEN über die FXML - Datei mittels
-     * ALT + ENTER mit der COntroller - Klasse verknüpft werden.
+     * ALT + ENTER mit der Controller - Klasse verknüpft werden.
      */
-
     public TextArea messageTextArea;
 
     private ArrayList<IFoodSubscriber> subscribers = new ArrayList<>();
-
-    public void shoutButtoClicked(ActionEvent actionEvent) {
-        if (messageTextArea.getText().length() > 0) {
-            notifySubscriber(messageTextArea.getText());
-
-            messageTextArea.clear();
-        }
-    }
 
     @Override
     public void addSubscriber(IFoodSubscriber subscriber) {
@@ -38,14 +29,24 @@ public class Controller implements IFoodPublisher {
 
     @Override
     public void notifySubscriber(String meal) {
-        // for (Klassenname variablenname : Liste)
+        // for (Klassenname variablenname : liste)
         // --> Für jedes IFoodSubscriber "element" aus der Liste "subscribers"
         //     mache folgendes...
         for (IFoodSubscriber element : subscribers) {
-            // Benachrichtige jeden subscriber (Fleischesser, Veganer, Vegetarier),
-            // dass es etwas zum Essen gibt.
+            // benachrichtige jeden Subscriber (Fleischesser, Veganer, Vegetarier),
+            // dass es etwas zum Essen geht.
             element.notify(meal);
         }
     }
-}
 
+    public void shoutButtonClicked(ActionEvent actionEvent) {
+
+        // wenn etwas eingegeben wurde!
+        if (messageTextArea.getText().length() > 0) {
+            notifySubscriber(messageTextArea.getText());
+
+            messageTextArea.clear();
+        }
+
+    }
+}

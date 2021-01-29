@@ -8,6 +8,6 @@ public interface IFoodSubscriber {
      * Als Übergabeparameter wir ein String übergeben
      * welcher die Mahlzeit enthält.
      */
-    void notify(String meal);
+    public void notify(String meal);
 
 }

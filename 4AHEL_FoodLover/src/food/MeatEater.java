@@ -1,13 +1,13 @@
 package food;
 
 public class MeatEater implements IFoodSubscriber {
-    private String[] favouriteFood = {"Fleisch", "Käse", "Eier", "Früchte"};
+    private String[] favoriteFood = {"Fleisch", "Käse", "Eier", "Früchte"};
 
     @Override
     public void notify(String meal) {
-        for (String food : favouriteFood) {
+        for (String food : favoriteFood) {
             if (meal.contains(food)) {
-                System.out.println("MeatEater: Oida bees!");
+                System.out.println("MeatEater: Yummy");
             }
         }
     }

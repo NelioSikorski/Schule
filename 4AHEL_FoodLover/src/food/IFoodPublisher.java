@@ -2,10 +2,10 @@ package food;
 
 public interface IFoodPublisher {
 
-    void addSubscriber(IFoodSubscriber subscriber);
+    public void addSubscriber(IFoodSubscriber subscriber);
 
-    void removeSubscriber(IFoodSubscriber subscriber);
+    public void removeSubscriber(IFoodSubscriber subscriber );
 
-    void notifySubscriber(String meal);
+    public void notifySubscriber(String meal);
 
 }

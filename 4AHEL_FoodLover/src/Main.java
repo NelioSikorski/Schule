@@ -46,7 +46,7 @@ public class Main extends Application {
          */
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("scene.fxml"));
-        Parent root = loader.load();
+        Parent root = loader.load(); //Vom Ausgabe Menü die INfo holen was der benutzer schreibt
 
         /**
          * Nachträgliches holen des Controllers!
@@ -57,14 +57,11 @@ public class Main extends Application {
          */
         Controller c = loader.getController();
 
-
-        c.addSubscriber(new MeatEater());
+        MeatEater tmp = new MeatEater();
+        c.addSubscriber(tmp);
 
         c.addSubscriber(new Vegetarian());
-
         c.addSubscriber(new Vegan());
-
-
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));

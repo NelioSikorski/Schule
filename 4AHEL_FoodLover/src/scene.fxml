@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button layoutX="31.0" layoutY="348.0" mnemonicParsing="false" onAction="#shoutButtoClicked" prefHeight="38.0" prefWidth="72.0" text="Shout" />
-      <TextArea fx:id="messageTextArea" layoutX="31.0" layoutY="14.0" prefHeight="324.0" prefWidth="539.0" />
+      <TextArea fx:id="messageTextArea" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="575.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Button layoutX="14.0" layoutY="225.0" mnemonicParsing="false" onAction="#shoutButtonClicked" text="Shout" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="534.0" AnchorPane.topAnchor="225.0" />
    </children>
 </AnchorPane>
