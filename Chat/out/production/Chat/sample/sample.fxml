@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="hostTextField" layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="152.0" promptText="Host eg.: 127.0.0.1" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <TextField fx:id="portTextField" layoutX="179.0" layoutY="16.0" prefHeight="25.0" prefWidth="109.0" promptText="Port eg.: 5432" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="15.0" />
+      <TextField fx:id="usernameTextField" layoutX="300.0" layoutY="16.0" promptText="Username" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="15.0" />
+      <Button layoutX="470.0" layoutY="16.0" mnemonicParsing="false" onAction="#connectButtonClicked" prefHeight="25.0" prefWidth="115.0" text="Connect" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <TextArea fx:id="inTextArea" editable="false" layoutX="14.0" layoutY="59.0" prefHeight="165.0" prefWidth="340.0" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="14.0" layoutY="42.0" text="INCOMING MESSAGES" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="45.0" />
+      <TextArea fx:id="outTextArea" layoutX="15.0" layoutY="243.0" prefHeight="113.0" prefWidth="570.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendButtonClicked" text="send" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="15.0" layoutY="225.0" text="YOUR MESSAGE" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="15.0" />
+      <ListView fx:id="usersListView" layoutX="484.0" layoutY="61.0" prefHeight="165.0" prefWidth="100.0" AnchorPane.bottomAnchor="175.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0" />
+      <ListView fx:id="channelListView" layoutX="379.0" layoutY="60.0" prefHeight="165.0" prefWidth="100.0" AnchorPane.bottomAnchor="175.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="60.0" />
+   </children>
+</AnchorPane>
